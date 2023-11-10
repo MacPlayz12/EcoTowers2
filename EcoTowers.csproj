@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>EcoTowers</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>EcoTowers</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include=".github\workflows\build.yml" />
+    </ItemGroup>
+
+    <Import Project="..\btd6.targets" />
+    <ItemGroup>
+    <Reference Include="PathsPlusPlus">
+        <HintPath>$(BloonsTD6)\Mods\PathsPlusPlus.dll</HintPath>
+    </Reference>
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Image\BTD1Display\bottom1.png" />
+      <None Remove="Towers\TestTwr\Upgrades\upgraded.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Towers\TestTwr\Test.cs">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Compile>
+    </ItemGroup>
+</Project>
