@@ -6,5 +6,6 @@
 <h1 align="center">EcoTowers</h1>
 
 this is a cringe mod probably
+dont expect anything good, im a begineer-modder
 
 [![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)
