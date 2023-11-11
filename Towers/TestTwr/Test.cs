@@ -31,6 +31,11 @@ namespace EcoTowers.Towers.TestTwr
                 return "bottom1";
             }
             
+            else if (tiers[2] == 2)
+            {
+                return "bottom2";
+            }
+            
             else if (tiers[1] == 1)
             {
                 return "middle1";
@@ -54,7 +59,7 @@ namespace EcoTowers.Towers.TestTwr
 
         public override int TopPathUpgrades => 1;
         public override int MiddlePathUpgrades => 1;
-        public override int BottomPathUpgrades => 1;
+        public override int BottomPathUpgrades => 2;
         public override string Description => "The original dart monkey!";
 
         public override string DisplayName => "OG Dart Monkey";

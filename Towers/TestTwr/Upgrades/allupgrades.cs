@@ -9,6 +9,11 @@ using System.Runtime.InteropServices;
 using Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack;
 using Il2CppAssets.Scripts.Unity;
 using EcoTowers.Towers.TestTwr.Projectiles;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
+using Il2CppAssets.Scripts.Models.Towers.Weapons;
+using Il2CppInterop.Runtime.InteropTypes.Arrays;
+using System.Xml.Linq;
+using UnityEngine.UIElements;
 
 namespace EcoTowers.Towers.TestTwr;
 
@@ -73,3 +78,20 @@ public class LongerRanger : ModUpgrade<BTD1Monkey>
     }
 }
 
+public class doubleshot : ModUpgrade<BTD1Monkey>
+{
+
+    public override int Path => BOTTOM;
+
+    public override int Tier => 2;
+
+    public override int Cost => 350;
+    public override string DisplayName => "Double Shot";
+    public override string Description => "Shoots 2 darts instead of one";
+    public override string Icon => "bot2";
+    public override void ApplyUpgrade(TowerModel towerModel)
+    {
+        towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel", 2, 3, 10, null, false, false);     
+        var attackModel = towerModel.GetAttackModel();
+    }
+}
