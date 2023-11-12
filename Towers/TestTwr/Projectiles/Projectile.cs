@@ -18,3 +18,13 @@ namespace EcoTowers.Towers.TestTwr.Projectiles
         }
     }
 }
+
+public class Burnydarts : ModDisplay
+{
+    public override string BaseDisplay => Generic2dDisplay;
+
+    public override void ModifyDisplayNode(UnityDisplayNode node)
+    {
+        Set2DTexture(node, Name);
+    }
+}

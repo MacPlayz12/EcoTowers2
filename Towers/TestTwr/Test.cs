@@ -21,19 +21,15 @@ namespace EcoTowers.Towers.TestTwr
          public override string Get2DTexture(int[] tiers)
         {
 
-            if (tiers[0] == 1)
-            {
-                return "top1";
-            }
 
-            else if (tiers[2] == 1)
+
+            if (tiers[2] == 5)
             {
-                return "bottom1";
+                return "bottom5";
             }
-            
-            else if (tiers[2] == 2)
+            else if (tiers[2] == 4)
             {
-                return "bottom2";
+                return "bottom4";
             }
 
             else if (tiers[2] == 3)
@@ -41,13 +37,65 @@ namespace EcoTowers.Towers.TestTwr
                 return "bottom3";
             }
 
-            else if (tiers[2] == 4)
+            else if (tiers[1] == 5)
             {
-                return "bottom4";
+                return "middle5";
             }
-            else if (tiers[2] == 5)
+
+
+
+            else if (tiers[1] == 4)
             {
-                return "bottom5";
+                return "middle4";
+            }
+
+            else if (tiers[0] == 5)
+            {
+                return "topp5";
+            }
+
+
+            else if (tiers[0] == 4)
+            {
+                return "topp4";
+            }
+
+
+            else if (tiers[0] == 3)
+            {
+                return "topp3";
+            }
+
+            else if (tiers[1] == 3)
+            {
+                return "middle3";
+            }
+
+            else if (tiers[2] == 2)
+            {
+                return "bottom2";
+            }
+
+            else if (tiers[1] == 2)
+            {
+                
+                return "middle2";
+            }
+
+            else if (tiers[0] == 2)
+            {
+                return "topp2";
+            }
+
+
+            else if (tiers[2] == 1)
+            {
+                return "bottom1";
+            }
+
+            else if (tiers[0] == 1)
+            {
+                return "topp1";
             }
 
             else if (tiers[1] == 1)
@@ -71,8 +119,8 @@ namespace EcoTowers.Towers.TestTwr
         public override int Cost => 250;
 
 
-        public override int TopPathUpgrades => 1;
-        public override int MiddlePathUpgrades => 1;
+        public override int TopPathUpgrades => 5;
+        public override int MiddlePathUpgrades => 5;
         public override int BottomPathUpgrades => 5;
         public override string Description => "The original dart monkey!";
 
