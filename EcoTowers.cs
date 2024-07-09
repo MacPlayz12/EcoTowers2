@@ -1,9 +1,12 @@
 using MelonLoader;
 using BTD_Mod_Helper;
 using EcoTowers;
+using HarmonyLib;
 using BTD_Mod_Helper.Api.Towers;
 using System.Collections.Generic;
 using Il2CppAssets.Scripts.Models.TowerSets;
+using Il2CppAssets.Scripts.Unity.UI_New.Main;
+using Il2CppAssets.Scripts.Unity;
 
 [assembly: MelonInfo(typeof(EcoTowers.EcoTowers), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
@@ -22,7 +25,7 @@ public class EcoTowers : BloonsTD6Mod
 
     public class Cool : ModTowerSet
     {
-        public override string DisplayName => "Retro Towers";
+        public override string DisplayName => "Ekko Towers";
 
         public override bool AllowInRestrictedModes => false; // Set to true to still allow these towers in Primary/Military/Magic only, etc
 

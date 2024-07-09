@@ -16,7 +16,7 @@ namespace EcoTowers.Towers.TestTwr
     /// <summary>
     /// The main class that adds the core tower to the game
     /// </summary>
-    public class BTD1Monkey : ModTower
+    public class BTD1Monkey : ModTower<EcoTowers.Cool>
     {
          public override string Get2DTexture(int[] tiers)
         {
@@ -113,7 +113,6 @@ namespace EcoTowers.Towers.TestTwr
         public override string Icon => "BTD1Monkey";
         public override bool Use2DModel => true;
 
-        public override TowerSet TowerSet => TowerSet.Primary;
 
         public override string BaseTower => TowerType.DartMonkey;
         public override int Cost => 250;
